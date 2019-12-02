@@ -33,7 +33,7 @@ public class ROT13 {
         StringBuilder sb = new StringBuilder("");
 
         for (int i = 0; i < s.length(); i++) {  // here we are determining how many letters to rotate in an alphabet, not the value of the character.
-            if (i + delta <= s.length()) {
+            if (i + delta < s.length()) {
                 sb = sb.append(s.charAt(i + delta));    // here we are changing the value of the value of the character that we are rotating.
             } else {
                 sb = sb.append(s.charAt((i + delta - s.length())));
